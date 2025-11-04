@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Milk Shop Dashboard</h2>
+    <button class="btn btn-outline-danger btn-sm" (click)="logout()">Logout</button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <h5 class="card-title">Daily Milk Supply</h5>
+          <p class="card-text">Record milk supplied today</p>
+          <button class="btn btn-primary w-100" routerLink="/milk-supply">Open</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <h5 class="card-title">Walk-in Customers</h5>
+          <p class="card-text">Add quick sales entries</p>
+          <button class="btn btn-primary w-100" routerLink="/walkin">Open</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body text-center">
+          <h5 class="card-title">Monthly Customers</h5>
+          <p class="card-text">Manage subscriptions and bills</p>
+          <button class="btn btn-primary w-100" routerLink="/customers">Open</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

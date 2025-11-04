@@ -1,0 +1,37 @@
+<div class="login-container d-flex align-items-center justify-content-center vh-100">
+  <div class="card shadow p-4" style="width: 360px;">
+    <h3 class="text-center mb-4">Milk Shop Login</h3>
+
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="mb-3">
+        <label>Username</label>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          [(ngModel)]="username"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label>Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          [(ngModel)]="password"
+          required
+        />
+      </div>
+
+      <button class="btn btn-primary w-100" [disabled]="loading">
+        {{ loading ? 'Logging in...' : 'Login' }}
+      </button>
+
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+        {{ errorMessage }}
+      </div>
+    </form>
+  </div>
+</div>
